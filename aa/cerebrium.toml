@@ -1,0 +1,28 @@
+[cerebrium.deployment]
+name = "cere"
+python_version = "3.11"
+deployment_initialization_timeout = 7200
+include = ['./*', 'main.py', 'cerebrium.toml']
+exclude = ['.*']
+
+[cerebrium.hardware]
+compute = "ADA_L40"
+gpu_count = 1
+provider = "crusoe"
+
+[cerebrium.scaling]
+compute_tier = "protected"
+min_replicas = 5
+max_replicas = 5
+cooldown = 10
+replica_concurrency = 1000
+
+[cerebrium.dependencies.pip]
+numpy = "latest"
+
+[cerebrium.dependencies.apt]
+curl = "latest"
+wget = "latest"
+ocl-icd-opencl-dev = "latest"
+sudo = "latest"
+git = "latest"
