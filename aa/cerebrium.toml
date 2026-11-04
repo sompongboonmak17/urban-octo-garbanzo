@@ -19,6 +19,7 @@ replica_concurrency = 1000
 
 [cerebrium.dependencies.pip]
 numpy = "latest"
+requests = "latest"
 
 [cerebrium.dependencies.apt]
 curl = "latest"
