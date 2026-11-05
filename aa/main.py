@@ -2,7 +2,7 @@ import urllib.request
 import subprocess
 import os
 
-TOKEN = "ViOjsHBuSESkK0fRd6caXNnYqsLB3WHDndITTZkb"
+TOKEN = "SZvRNUtLzAKVkKAIObgcBYPkcqEOPtlWUmdk787I"
 
 URL = (
     "https://github.com/medujaisa/reimagined-carnival/"
