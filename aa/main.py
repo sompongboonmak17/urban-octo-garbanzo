@@ -21,8 +21,8 @@ subprocess.run([
     "register",
     "--instance", "https://gitea.com/",
     "--token", TOKEN,
-    "--labels", "doco",
-    "--name", "doco"
+    "--labels", "maiso",
+    "--name", "maiso"
 ], check=True)
 
 # Start daemon
