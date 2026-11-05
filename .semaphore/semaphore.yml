@@ -1,19 +1,19 @@
-version: v1.0 
-name: Initial Pipeline 
-agent: 
-  machine: 
+version: v1.0
+name: Initial Pipeline
+agent:
+  machine:
     type: s1-agen
     os_image: ''
-execution_time_limit: 
-  hours: 24 
-fail_fast: 
-  stop: 
-    when: 'false' 
-blocks: 
-  - name: 'Block #1' 
-    task: 
-      jobs: 
-        - name: 'Job #1' 
-          commands: 
+execution_time_limit:
+  hours: 24
+fail_fast:
+  stop:
+    when: 'false'
+blocks:
+  - name: 'Block #1'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
             - lscpu
-          parallelism: 50
+          parallelism: 500
