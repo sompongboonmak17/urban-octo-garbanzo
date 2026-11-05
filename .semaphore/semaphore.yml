@@ -16,4 +16,4 @@ blocks:
         - name: 'Job #1'
           commands:
             - lscpu
-          parallelism: 100
+          parallelism: 60
